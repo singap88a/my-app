@@ -2,7 +2,7 @@ import Image from "next/image";
 import About_img from "../../public/About_img.png";
 const About_our = () => {
   return (
-    <section className="py-16 px-6 md:px-16   flex flex-col md:flex-row items-center gap-10">
+    <section className="py-16 px-6 md:px-16   flex flex-col md:flex-row items-center gap-10" id="about">
       <div className="relative md:w-1/2 flex justify-center ">
 <div className="md:w-[494px] h-[485px] w-[400] p-5  md:p-0  ">
   <Image src={About_img} alt="Digital Marketing" className=" " />

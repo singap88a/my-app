@@ -6,7 +6,7 @@ import hero_2 from "../../public/Hero_2.jpeg";
 export default function Hero() {
   return (
     <div>
-      <section className=" md:pl-20 flex flex-col md:flex-row items-center justify-between pt-20 pr-2 pl-2">
+      <section className=" md:pl-20 flex flex-col md:flex-row items-center justify-between pt-20 pr-2 pl-2" id="home">
          <div className="md:w-1/2 text-center md:text-left space-y-6">
           <h1 className="text-3xl md:text-4xl font-bold text-black leading-tight">
             We make your brand speak loudly in a <br /> world full of noise

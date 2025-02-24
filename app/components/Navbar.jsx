@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { FaArrowRight, FaTimes, FaBars } from "react-icons/fa";  
@@ -8,16 +8,35 @@ const Navbar = () => {
   const pathname = usePathname();
   const [hovered, setHovered] = useState(null);
   const [isMenuOpen, setIsMenuOpen] = useState(false);  
+  const [hasShadow, setHasShadow] = useState(false);  
 
   const navLinks = [
-    { name: "Home", href: "/" },
-    { name: "About", href: "/about" },
-    { name: "Service", href: "/service" },
-    { name: "Contact", href: "/contact" },
+    { name: "Home", href: "#home" }, // تغيير href ليشير إلى id القسم
+    { name: "About", href: "#about" },
+    { name: "Service", href: "#service" },
+    { name: "Contact", href: "#contact" },
   ];
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setHasShadow(true);
+      } else {
+        setHasShadow(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <nav className=" absolute top-0 left-0 w-full     py-4 flex justify-between items-center  z-50 md:px-20 px-10">
+    <nav className={`fixed top-0 left-0 w-full py-4 flex justify-between items-center z-50 md:px-20 px-10 transition-shadow duration-300 ${
+      hasShadow ? "shadow-lg bg-[#fef5da]" : "bg-transparent"
+    }`}>
         
        <div className="text-black font-bold text-2xl tracking-wide z-50">
         <span className="opacity-100">Mark</span>
@@ -45,7 +64,7 @@ const Navbar = () => {
          <div
           className={`${
             isMenuOpen
-              ? "bg-slate-400 w-full rounded-lg shadow-lg z-50 text-center py-10  absolute top-0"
+              ? "bg-slate-300 w-full rounded-lg shadow-lg z-50 text-center py-10  absolute top-0"
               : "flex space-x-8"
           }`}
         >

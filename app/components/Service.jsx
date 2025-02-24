@@ -29,7 +29,7 @@ const services = [
 
 const Service = () => {
   return (
-    <section className="pt-16 px-5 md:px-20 bg-gradient-to-b from-white to-[#FBBD0426] text-center">
+    <section className="pt-16 px-5 md:px-20 bg-gradient-to-b from-white to-[#FBBD0426] text-center" id="service">
        <h2 className="text-[36px] md:text-4xl font-bold">
         <span className="text-[#FBBD04]">Service</span>{" "}
         <span className="text-black">Our Company</span>

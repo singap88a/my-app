@@ -28,7 +28,7 @@ export default function Contact() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center p-6">
+    <div className="min-h-screen flex items-center justify-center p-6" id="contact">
       <div className="flex flex-col md:flex-row px-5 md:px-20 rounded-lg w-full">
          <div className="md:w-1/2 p-4 md:text-start text-center">
           <h1 className="text-[36px] font-bold text-[#FBBD04] ">
