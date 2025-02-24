@@ -64,16 +64,18 @@ const Navbar = () => {
          <div
           className={`${
             isMenuOpen
-              ? "bg-slate-300 w-full rounded-lg shadow-lg z-50 text-center py-10  absolute top-0"
-              : "flex space-x-8"
+              ? "bg-slate-300 w-full    z-50   py-10  absolute top-0 text-center mx-auto  px-10"
+              : "flex space-x-8 "
           }`}
         >
           {navLinks.map((link, index) => (
-            <li key={index}>
+            <li key={index} 
+            className=""
+            >
               <Link
                 href={link.href}
                 className={`relative flex items-center ${
-                  pathname === link.href ? "text-black   text-[20px] font-bold" : "text-gray-800 text-[20px] font-bold"
+                  pathname === link.href ? "text-black   text-[20px] font-bold   " : "text-gray-800 text-[20px] font-bold   "
                 }`}
                 onMouseEnter={() => setHovered(index)}
                 onMouseLeave={() => setHovered(null)}
