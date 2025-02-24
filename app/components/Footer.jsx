@@ -2,7 +2,7 @@ import { FaFacebookF, FaInstagram, FaWhatsapp, FaLinkedinIn } from "react-icons/
 
 export default function Footer() {
   return (
-    <footer className="bg-gradient-to-b from-[#FDF6E3] to-[#FBE5C0] text-center py-10 px-5">
+    <footer className="bg-gradient-to-b from-[#fdf6e300] to-[#fbe5c0d6] text-center py-10 px-5">
       <h2 className="text-[32px] font-bold text-gray-900">DEW marketing agency</h2>
       <div className="mt-2 text-2xl font-bold text-gray-900 tracking-widest">
         . . . . . . . . .

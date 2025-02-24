@@ -75,7 +75,7 @@ export default function Contact() {
 
          <div className="md:w-1/2 p-6 bg-[#FBBD0424] rounded-lg border-2">
           <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
-            <div className="flex space-x-2 gap-14 pb-7">
+            <div className=" flex  space-x-2 md:gap-14 pb-7 gap-4">
               <div className="w-1/2">
                 <input
                   type="email"
