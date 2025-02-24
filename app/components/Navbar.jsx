@@ -11,10 +11,10 @@ const Navbar = () => {
   const [hasShadow, setHasShadow] = useState(false);  
 
   const navLinks = [
-    { name: "Home", href: "#home" }, // تغيير href ليشير إلى id القسم
+    { name: "Home", href: "#home" },
     { name: "About", href: "#about" },
     { name: "Service", href: "#service" },
-    { name: "Contact", href: "#contact" },
+    { name: "Contact", href: "#contact", icon: <FaArrowRight className="ml-2" /> },  
   ];
 
   useEffect(() => {
@@ -72,7 +72,7 @@ const Navbar = () => {
             <li key={index}>
               <Link
                 href={link.href}
-                className={`relative ${
+                className={`relative flex items-center ${
                   pathname === link.href ? "text-black   text-[20px] font-bold" : "text-gray-800 text-[20px] font-bold"
                 }`}
                 onMouseEnter={() => setHovered(index)}
@@ -80,6 +80,7 @@ const Navbar = () => {
                 onClick={() => setIsMenuOpen(false)} 
               >
                 {link.name}
+                {link.icon && link.icon}  
                  {(pathname === link.href || hovered === index) && (
                   <>
                     <span className="absolute left-0 top-0 w-full h-0.5 bg-white transform -translate-y-1"></span>
