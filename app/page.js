@@ -10,7 +10,7 @@ import Footer from "./components/Footer";
 export default function Home() {
   return (
     <div className=" ">
-      <div className="bg-gradient-to-b from-[#FBBD04] to-white py-16">
+      <div className="bg-gradient-to-b from-[#fbbd04bf] to-white py-16">
         <Navbar />
         <Hero />
       </div>

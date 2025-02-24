@@ -3,7 +3,9 @@
 @tailwind utilities;
 
  
- 
+ *{
+  font-family:"Kumar_One"
+ }
  
 .container {
   max-width: 1200px;  

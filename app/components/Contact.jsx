@@ -28,16 +28,16 @@ export default function Contact() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center p-6" id="contact">
+    <div className="min-h-screen flex items-center justify-center  " id="contact">
       <div className="flex flex-col md:flex-row px-5 md:px-20 rounded-lg w-full">
          <div className="md:w-1/2 p-4 md:text-start text-center">
-          <h1 className="text-[36px] font-bold text-[#FBBD04] ">
+          <h1 className="md:text-[36px] text-[32px] font-bold text-[#FBBD04] ">
             Contact <span className="text-black">Our Company</span>
           </h1>
-          <h2 className="text-[40px] font-semibold text-[#FBBD04] mt-4">
+          <h2 className="md:text-[40px] text-[36px] font-semibold text-[#FBBD04] mt-4">
             Get In Touch
           </h2>
-          <p className="text-gray-700 mt-2 text-[32px]">
+          <p className="text-gray-700 mt-2 md:text-[32px] text-[25px]">
             Contact our company for solutions that meet your needs and support
             your success.
           </p>

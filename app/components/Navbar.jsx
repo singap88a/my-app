@@ -64,7 +64,7 @@ const Navbar = () => {
          <div
           className={`${
             isMenuOpen
-              ? "bg-slate-300 w-full    z-50   py-10  absolute top-0 text-center mx-auto  px-10"
+              ? "bg-[#fef5da] w-full    z-50   py-10  absolute -top-2 text-center mx-auto  px-10"
               : "flex space-x-8 "
           }`}
         >

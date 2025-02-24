@@ -8,9 +8,9 @@ export default function Footer() {
         . . . . . . . . .
       </div>
 
-       <nav className="mt-4 flex justify-center space-x-8 text-gray-800 font-medium">
+       <nav className="mt-4 flex justify-center space-x-8 text-gray-800 font-medium ">
         <a href="#" className="hover:text-gray-600 text-[22px]">Home</a>
-        <a href="#" className="hover:text-gray-600 text-[22px]">About Us</a>
+        <a href="#" className="hover:text-gray-600 text-[22px]">About_Us</a>
         <a href="#" className="hover:text-gray-600 text-[22px]">Services</a>
         <a href="#" className="hover:text-gray-600 text-[22px]">Contact</a>
       </nav>

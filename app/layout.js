@@ -26,6 +26,20 @@ export default function RootLayout({ children }) {
           href="https://fonts.googleapis.com/css2?family=Kumar+One&display=swap"
           rel="stylesheet"
         />
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Jomhuria:wght@400"
+        />
+
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Kumar+One:wght@400"
+        />
+
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;700"
+        />
         {children}
       </body>
     </html>

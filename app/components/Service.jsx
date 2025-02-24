@@ -29,17 +29,17 @@ const services = [
 
 const Service = () => {
   return (
-    <section className="pt-16 px-5 md:px-20 bg-gradient-to-b from-white to-[#FBBD0426] text-center" id="service">
-       <h2 className="text-[36px] md:text-4xl font-bold">
+    <section className="  mx-auto bg-gradient-to-b from-white via-[#FBBD0426] to-white py-16 rounded-lg text-center">
+               <h2 className="text-[36px] md:text-4xl font-bold">
         <span className="text-[#FBBD04]">Service</span>{" "}
         <span className="text-black">Our Company</span>
       </h2>
-      <p className="text-gray-700 text-[36px] mt-4">
+      <p className="text-gray-700 md:text-[36px] text-[30px] mt-4">
         We are committed to providing integrated services based <br /> on the
         latest technologies
       </p>
 
-       <div className="mt-12 flex flex-col md:flex-row items-center justify-between gap-8">
+       <div className="mt-12 flex flex-col md:flex-row items-center justify-between gap-8 px-20">
         {services.map((service, index) => (
           <div
             key={service.id}

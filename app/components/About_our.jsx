@@ -2,7 +2,7 @@ import Image from "next/image";
 import About_img from "../../public/About_img.png";
 const About_our = () => {
   return (
-    <section className="py-16 px-6 md:px-16   flex flex-col md:flex-row items-center gap-10" id="about">
+    <section className="md:py-16 py-0 px-6 md:px-16   flex flex-col md:flex-row items-center gap-10" id="about">
       <div className="relative md:w-1/2 flex justify-center ">
 <div className="md:w-[494px] h-[485px] w-[400] p-5  md:p-0  ">
   <Image src={About_img} alt="Digital Marketing" className=" " />
@@ -23,11 +23,11 @@ const About_our = () => {
 
         </div>
 
-      <div className="md:w-1/2 space-y-4 text-center md:text-left">
-        <h3 className="text-[#FBBD04] text-[36px] font-bold">
+      <div className="md:w-1/2 space-y-4 text-center md:text-left [font-family:Kumar_One]">
+        <h3 className="text-[#FBBD04] md:text-[36px] font-bold [font-family:Kumar_One] text-[25px]">
           About our company
         </h3>
-        <h2 className="text-[48px] font-semibold text-black leading-tight">
+        <h2 className="md:text-[48px] font-semibold text-black leading-tight text-[25px] ">
           Building a more <span className="text-[#FBBD04]">competitive</span>{" "}
           business sectors
         </h2>
