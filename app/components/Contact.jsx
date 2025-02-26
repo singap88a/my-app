@@ -1,20 +1,20 @@
 "use client";
-
 import { useForm } from "react-hook-form";
 import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaFacebook } from "react-icons/fa";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { motion } from "framer-motion";
 
 export default function Contact() {
   const {
     register,
     handleSubmit,
-    reset,  
+    reset,
     formState: { errors },
   } = useForm();
 
   const onSubmit = (data) => {
-    console.log("Form Data:", data);  
+    console.log("Form Data:", data);
     toast.success("Message sent successfully!", {
       position: "top-center",
       autoClose: 2000,
@@ -24,14 +24,30 @@ export default function Contact() {
       draggable: true,
       progress: undefined,
     });
-    reset();  
+    reset();
+  };
+
+  const fadeInLeft = {
+    hidden: { opacity: 0, scale: 0.9 },  
+    visible: { opacity: 1, scale: 1, transition: { duration: 0.6 } },
+  };
+
+  const fadeInRight = {
+    hidden: { opacity: 0, scale: 0.9 },  
+    visible: { opacity: 1, scale: 1, transition: { duration: 0.6 } },
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center  " id="contact">
+    <div className="min-h-screen flex items-center justify-center" id="contact">
       <div className="flex flex-col md:flex-row px-5 md:px-20 rounded-lg w-full">
-         <div className="md:w-1/2 p-4 md:text-start text-center">
-          <h1 className="md:text-[36px] text-[32px] font-bold text-[#FBBD04] ">
+         <motion.div
+          className="md:w-1/2 p-4 md:text-start text-center"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={fadeInLeft}
+        >
+          <h1 className="md:text-[36px] text-[32px] font-bold text-[#FBBD04]">
             Contact <span className="text-black">Our Company</span>
           </h1>
           <h2 className="md:text-[40px] text-[36px] font-semibold text-[#FBBD04] mt-4">
@@ -71,11 +87,17 @@ export default function Contact() {
               <span>DMW marketing agency</span>
             </div>
           </div>
-        </div>
+        </motion.div>
 
-         <div className="md:w-1/2 p-6 bg-[#FBBD0424] rounded-lg border-2">
+         <motion.div
+          className="md:w-1/2 p-6 bg-[#FBBD0424] rounded-lg border-2"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={fadeInRight}
+        >
           <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
-            <div className=" flex  space-x-2 md:gap-14 pb-7 gap-4">
+            <div className="flex space-x-2 md:gap-14 pb-7 gap-4">
               <div className="w-1/2">
                 <input
                   type="email"
@@ -146,7 +168,7 @@ export default function Contact() {
               Submit
             </button>
           </form>
-        </div>
+        </motion.div>
       </div>
       <ToastContainer />
     </div>

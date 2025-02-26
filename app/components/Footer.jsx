@@ -34,8 +34,7 @@ export default function Footer() {
         </a>
       </div>
 
-      {/* حقوق النشر */}
-      <p className="mt-6 text-gray-700 text-sm text-[14px]">
+       <p className="mt-6 text-gray-700 text-sm text-[14px]">
         © 2024 All rights reserved to DEW marketing agency
       </p>
     </footer>
